@@ -1,0 +1,29 @@
+# full disk path to install to, eg: "/dev/sdX"
+disk=""
+
+# format as Continent/City, eg: "Australia/Melbourne"
+timezone=""
+
+# format as language_COUNTRY, eg: "en_AU", "es_CL", "pt_BR"
+locale=""
+
+# name for non-root wheel group user (leave blank to skip)
+user=""
+
+# specify computer name (leave blank for default name)
+hostname=""
+
+# iso should be booted in uefi mode if enabled
+efi=0
+
+# will create a swapfile at / of desired size in GiB (0 to disable)
+swapsize=0
+
+# rootfs luks encryption
+encrypt=0
+
+# overwrite disk data with zeroes
+zerodisk=0
+
+# start sshd by default
+sshd=0
