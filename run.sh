@@ -54,7 +54,7 @@ mkdir -p /mnt/boot
 mount "$bootpart" /mnt/boot
 
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
-pacstrap /mnt base base-devel linux linux-firmware grub vim networkmanager efibootmgr openssh git bash-completion tmux wget man-db man-pages zip unzip python3 net-tools
+pacstrap /mnt base base-devel linux linux-firmware grub vim networkmanager efibootmgr openssh git bash-completion tmux wget man-db man-pages python3 net-tools
 genfstab -U /mnt > /mnt/etc/fstab
 
 if ! [ -z "$swapsize" ]; then
