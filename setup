@@ -1,0 +1,32 @@
+# full disk path to install to
+disk=""
+
+# format as Continent/City
+timezone=""
+
+# format as language_COUNTRY
+locale=""
+
+# name for non-root wheel group user (leave blank to skip)
+user=""
+
+# (leave blank for default name)
+hostname=""
+
+# iso should be booted in uefi mode if enabled
+efi=0
+
+# will create a swapfile at / of desired size in GiB (0 to disable)
+swapsize=0
+
+# rootfs luks encryption
+encrypt=0
+
+# overwrite disk data with zeroes
+zerodisk=0
+
+# start sshd by default
+sshd=0
+
+# extra
+packages="git bash-completion tmux wget man-db man-pages python3 net-tools"
