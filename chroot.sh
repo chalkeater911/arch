@@ -11,8 +11,8 @@ if [ "$sshd" -eq 1 ]; then
 fi
 
 if [ "$encrypt" -eq 1 ]; then
-    sed -i "s/^GRUB_CMDLINE_LINUX=\"\"/GRUB_CMDLINE_LINUX=\"cryptdevice=UUID=${encryptuuid}:root root=\/dev\/mapper\/root\"/" /etc/default/grub
-    sed -i "/^HOOKS=/s/.*/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt filesystems fsck)/" /etc/mkinitcpio.conf
+    sed -i "s|^GRUB_CMDLINE_LINUX=\"\"|GRUB_CMDLINE_LINUX=\"cryptdevice=UUID=${encryptuuid}:root root=/dev/mapper/root\"|" /etc/default/grub
+    sed -i "s|^HOOKS=.*|HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt filesystems fsck)|" /etc/mkinitcpio.conf
     mkinitcpio -p linux
 fi
 
