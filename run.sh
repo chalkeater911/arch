@@ -79,5 +79,4 @@ sed -i "s/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: A
 mv chroot.sh setup /mnt/
 chmod +x /mnt/*.sh
 arch-chroot /mnt /chroot.sh
-arch-chroot /mnt /chroot.sh
 rm /mnt/chroot.sh
